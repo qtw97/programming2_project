@@ -82,6 +82,36 @@ public class Person {
 				"Age: " + getAge();
     	
     }
+
+    // Patient class
+    class PatientPerson extends Person {
+        private String insuranceCompany;
+        private String employer;
+    
+        public PatientPerson(String name, String dateOfBirth, String insuranceCompany, String employer) {
+            super(firstName, lastName, address, birthdate, phone);
+            this.insuranceCompany = insuranceCompany;
+            this.employer = employer;
+        }
+    
+        // Getters and setters for insuranceCompany and employer
+        public String getInsuranceCompany() {
+            return insuranceCompany;
+        }
+    
+        public void setInsuranceCompany(String insuranceCompany) {
+            this.insuranceCompany = insuranceCompany;
+        }
+    
+        public String getEmployer() {
+            return employer;
+        }
+    
+        public void setEmployer(String employer) {
+            this.employer = employer;
+        }
+    }
+
     // this main method is to try to excute the program, it can be deleted.
     public static void main(String[] args) {
     	
