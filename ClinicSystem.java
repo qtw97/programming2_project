@@ -135,7 +135,7 @@ abstract class Person {
     }
 
     // Patient class
-    class Patient extends Person {
+    public class Patient extends Person {
         private String insuranceCompany;
         private String employer;
     
