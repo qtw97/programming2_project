@@ -8,7 +8,7 @@ public class ClinicSystem {
         Doctor doctor = new Doctor("Dr. Smith", "1970-01-01", "2020-01-01", "Cardiology");
 
         // Creating a patient
-        Patient patient = new Patient(name:"John Smith");
+        Patient patient = new Patient("John", "Doe", "1980-01-01", "Company A", "Insurance A");
 
         // Recording a treatment
         // Treatment treatment = new Treatment("2024-04-09", "10:00", "11:00", doctor, patient);
@@ -103,7 +103,7 @@ abstract class Person {
     }
 
     // Doctor class
-    public class Doctor extends Person {
+    class Doctor extends Person {
         private String dateOfEmployment;
         private String specialty;
     
@@ -135,11 +135,11 @@ abstract class Person {
     }
 
     // Patient class
-    public class Patient extends Person {
+    class Patient extends Person {
         private String insuranceCompany;
         private String employer;
     
-        public Patient(String name, String dateOfBirth, String insuranceCompany, String employer) {
+        public Patient(String firstName, String lastName, String dateOfBirth, String insuranceCompany, String employer) {
             super(firstName, lastName, address, birthdate, phone);
             this.insuranceCompany = insuranceCompany;
             this.employer = employer;
