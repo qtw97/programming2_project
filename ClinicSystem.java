@@ -8,7 +8,7 @@ public class ClinicSystem {
         // Doctor doctor = new Doctor("Emily", "Stone", "123 Main St", LocalDate.of(1975, 5, 5), "555-123-4567", LocalDate.of(2005, 5, 5), "Cardiology");
 
         // Creating a patient
-        Patient patient = new Patient("John", "Doe", LocalDate.of(1980, 1, 1), "Company A", "Insurance A");
+        Patient patient = new Patient("John", "Doe", LocalDate.of(1980, 1, 1), "Company A", "Insurance A",LocalDate.of(2017, 1, 5));
 
         // Recording a treatment
         // Treatment treatment = new Treatment("2024-04-09", "10:00", "11:00", doctor,
