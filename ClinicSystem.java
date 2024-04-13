@@ -5,7 +5,7 @@ import java.io.*;
 public class ClinicSystem {
     public static void main(String[] args) {
         // Creating a doctor
-        Doctor doctor = new Doctor("Dr. Smith", "1970-01-01", "2020-01-01", "Cardiology");
+        // Doctor doctor = new Doctor("Emily", "Stone", "123 Main St", LocalDate.of(1975, 5, 5), "555-123-4567", LocalDate.of(2005, 5, 5), "Cardiology");
 
         // Creating a patient
         Patient patient = new Patient("John", "Doe", LocalDate.of(1980, 1, 1), "Company A", "Insurance A");
@@ -117,8 +117,10 @@ class Doctor extends Person {
 class Patient extends Person {
     private String insuranceCompany;
     private String employer;
+    private LocalDate appointment;
+    private String treatment;
 
-    public Patient(String firstName, String lastName, LocalDate birthdate, String insuranceCompany, String employer) {
+    public Patient(String firstName, String lastName, LocalDate birthdate, String insuranceCompany, String employer, LocalDate appointment) {
         super(firstName, lastName, "", birthdate, "");
         this.insuranceCompany = insuranceCompany;
         this.employer = employer;
@@ -138,6 +140,14 @@ class Patient extends Person {
 
     public void setEmployer(String employer) {
         this.employer = employer;
+    }
+
+    public LocalDate getAppointment() {
+        return appointment;
+    }
+
+    public void setAppointment(LocalDate appointment) {
+        this.appointment = appointment;
     }
 
     public static void storePatient(Patient patient) {
