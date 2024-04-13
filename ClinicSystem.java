@@ -11,10 +11,12 @@ public class ClinicSystem {
         Patient patient = new Patient("John", "Doe", LocalDate.of(1980, 1, 1), "Company A", "Insurance A");
 
         // Recording a treatment
-        // Treatment treatment = new Treatment("2024-04-09", "10:00", "11:00", doctor, patient);
+        // Treatment treatment = new Treatment("2024-04-09", "10:00", "11:00", doctor,
+        // patient);
 
         LocalDate birthdate = LocalDate.of(1990, 5, 15);
-        // Person person1 = new Person("John", "Doe", "123 Main St, Anytown, USA", birthdate, "555-123-4567");
+        // Person person1 = new Person("John", "Doe", "123 Main St, Anytown, USA",
+        // birthdate, "555-123-4567");
         // System.out.println(person1.getInfo());
     }
 }
@@ -88,8 +90,9 @@ class Doctor extends Person {
     private String dateOfEmployment;
     private String specialty;
 
-    public Doctor(String name, String dob, String dateOfEmployment, String specialty) {
-        super(name.split(" ")[0], name.split(" ")[1], "", LocalDate.parse(dob), "");
+    public Doctor(String firstName, String lastName, String address, LocalDate birthdate, String phone,
+            String dateOfEmployment, String specialty) {
+        super(firstName, lastName, address, birthdate, phone);
         this.dateOfEmployment = dateOfEmployment;
         this.specialty = specialty;
     }
@@ -98,11 +101,8 @@ class Doctor extends Person {
         return dateOfEmployment;
     }
 
-    public String getSpecialty() {
-        return specialty;
-    }
-
     public void storeDoctor() {
+        // Code to store the doctor to the database
         try {
             FileWriter writer = new FileWriter("Doctor.txt", true);
             writer.write(getName() + "," + getBirthdate() + "," + dateOfEmployment + "," + specialty + "\n");
