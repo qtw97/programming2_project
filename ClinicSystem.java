@@ -139,4 +139,16 @@ class Patient extends Person {
     public void setEmployer(String employer) {
         this.employer = employer;
     }
+
+    public static void storePatient(Patient patient) {
+        try {
+            FileWriter writer = new FileWriter("Patients.txt", true);
+            writer.write(patient.getName() + "," + patient.getBirthdate() + "," +
+                    patient.getInsuranceCompany() + "," + patient.getEmployer() + "\n");
+            writer.close();
+            System.out.println("Patient data stored successfully.");
+        } catch (IOException e) {
+            System.out.println("Error storing patient data: " + e.getMessage());
+        }
+    }
 }
