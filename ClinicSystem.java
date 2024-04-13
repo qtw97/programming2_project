@@ -118,7 +118,6 @@ class Patient extends Person {
     private String insuranceCompany;
     private String employer;
     private LocalDate appointment;
-    private String treatment;
 
     public Patient(String firstName, String lastName, LocalDate birthdate, String insuranceCompany, String employer, LocalDate appointment) {
         super(firstName, lastName, "", birthdate, "");
